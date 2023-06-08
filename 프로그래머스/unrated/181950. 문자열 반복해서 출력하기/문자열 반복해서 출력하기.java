@@ -7,8 +7,8 @@ public class Solution {
         int n = sc.nextInt();
         int l=str.length();
         
-        if(l>=1 && l<=10&&n>=1&&n<=5){
-            for(int i=0;i<n;i++){
+        if( l>=1 && l<=10 && n>=1 && n<=5 ){
+            for(int i=0 ; i<n ; i++ ){
                 System.out.print(str);
             }
         }
