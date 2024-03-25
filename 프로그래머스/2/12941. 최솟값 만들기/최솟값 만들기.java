@@ -9,13 +9,9 @@ class Solution
         Arrays.sort(A);
         Arrays.sort(B);
         
-
-        
         for(int i=0; i<A.length; i++) {
             sum += A[i]*B[A.length-i-1];
         }
-        
-        System.out.println(sum);
 
         return sum;
     }
