@@ -5,13 +5,26 @@ class Solution {
         String answer = "";
         
         String[] array = s.split(" ");
-        Integer[] intArray = new Integer[array.length];
-        for(int i=0; i<array.length; i++) {
-            intArray[i] = Integer.parseInt(array[i]);
-        }
-        Arrays.sort(intArray);
+        //Integer[] intArray = new Integer[array.length];
         
-        answer += intArray[0] + " " + intArray[array.length-1];
+        int max, min, n;
+        max = Integer.parseInt(array[0]);
+        min = Integer.parseInt(array[0]);
+        
+        for(int i=0; i<array.length; i++) {
+            //intArray[i] = Integer.parseInt(array[i]);
+            n = Integer.parseInt(array[i]);
+            if(min > n) {
+                min = n;
+            }
+            if(max < n) {
+                max = n;
+            }
+            
+        }
+        //Arrays.sort(intArray);
+        
+        answer += min + " " + max;
         
         return answer;
     }
