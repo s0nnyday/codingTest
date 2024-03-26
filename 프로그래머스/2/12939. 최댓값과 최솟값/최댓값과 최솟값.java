@@ -24,6 +24,7 @@ class Solution {
         }
         //Arrays.sort(intArray);
         
+        // answer += intArray[0] + " " + intArray[array.length-1];
         answer += min + " " + max;
         
         return answer;
