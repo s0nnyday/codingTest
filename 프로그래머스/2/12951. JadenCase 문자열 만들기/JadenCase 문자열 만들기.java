@@ -1,21 +1,27 @@
 class Solution {
     public String solution(String s) {
-        StringBuilder sb = new StringBuilder();
+        String answer = "";
+        
+        String str = s.toLowerCase();
+        String[] arrays = str.split("");
+        
         boolean isFirst = true;
-
-        for(char c : s.toCharArray()) {
-            if(isFirst) {
-                sb.append(Character.toUpperCase(c));
+        
+        for(String c :arrays) {
+            if (isFirst) {
+                answer += c.toUpperCase();
                 isFirst = false;
             } else {
-                sb.append(Character.toLowerCase(c));
+                answer += c;
             }
             
-            if (c == ' ') {
+            if(c.equals(" ")) {
                 isFirst = true;
+            } else {
+                isFirst = false;
             }
         }
-        
-        return sb.toString();
+
+        return answer;
     }
 }
