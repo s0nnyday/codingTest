@@ -22,8 +22,6 @@ class Solution {
                 binaryString = (onesCount % 2) + binaryString; // 나머지를 앞에 추가
                 onesCount /= 2; // 몫을 다시 계산
             }
-            // 이진 변환 결과의 길이
-            int binaryLength = binaryString.length();
             
             s = binaryString; // 변환된 이진수를 s에 저장
             
