@@ -16,16 +16,15 @@ class Solution {
         
         // 리스트를 배열로 변환
         int[] divisorsArray = divisorsList.stream().mapToInt(i -> i).toArray();
+        int len = divisorsArray.length;
         
-        for (int i = 0; i < divisorsArray.length; i++) {
-            int width = divisorsArray[i];
-            int height = yellow / width;
+        for(int i = 0; i < len; i++) {
+            
+            int result = 4 + (divisorsArray[i] * 2) + (divisorsArray[len - 1 - i] * 2);
 
-            // 갈색 타일의 개수 계산
-            int border = (width + 2) * (height + 2) - yellow;
-            if (border == brown) {
-                answer[0] = Math.max(width + 2, height + 2);
-                answer[1] = Math.min(width + 2, height + 2);
+            if(result == brown) {
+                answer[0] = divisorsArray[len - 1 - i]+2;
+                answer[1] = divisorsArray[i]+2;
                 break;
             }
         }
