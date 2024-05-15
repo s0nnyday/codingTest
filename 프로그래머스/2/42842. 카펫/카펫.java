@@ -18,6 +18,7 @@ class Solution {
         int[] divisorsArray = divisorsList.stream().mapToInt(i -> i).toArray();
         int len = divisorsArray.length;
         
+        // 갈색 카펫 수 == 노란색 모서리 4 + (노란색 행*2) + (노란색 열*2)
         for(int i = 0; i < len; i++) {
             
             int result = 4 + (divisorsArray[i] * 2) + (divisorsArray[len - 1 - i] * 2);
